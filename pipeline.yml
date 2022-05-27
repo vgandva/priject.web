@@ -1,4 +1,4 @@
- run the pipeline on changes in master branch
+# run the pipeline on changes in master branch
 trigger:
   - master
 # build environment - OS
@@ -21,9 +21,9 @@ steps:
       rm -rf .git
       # re-initialise git
       git init
-      git config user.name "<vgandva>"
-      git config user.email "<vgandvr@gmail.com>"
-      git remote set-url origin https://<githubLogin>:${GIT_TOKEN}@github.com/<githubLogin>/<publicRepositoryName>.git
+      git config user.name "vgandva"
+      git config user.email "vgandvr@gmail.com"
+      git remote set-url origin https://vgandva@:${GIT_TOKEN}@github.com/vgandva/VRFORVIEWERS.git
       # add and commit /docs/ folder
       git add docs
       git commit -m "deploy the bundle"
